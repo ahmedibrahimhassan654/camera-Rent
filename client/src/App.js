@@ -9,10 +9,10 @@ import ProductsHome from "./pages/products/ProductsHome";
 import BlogsHome from "./pages/Blogs/BlogsHome";
 
 import HeaderNav from "./components/nav/Header";
+
 function App() {
   return (
     <>
-    
       <HeaderNav />
 
       <Switch>
