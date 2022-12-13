@@ -1,16 +1,13 @@
 import React, { useState } from "react";
+
+//import logoPic from "../../../public/logo192.png";
 import {
   AppstoreOutlined,
-  HomeTwoTone,
   LogoutOutlined,
   ProfileOutlined,
-  SettingOutlined,
   ShopOutlined,
-  UserAddOutlined,
-  UserOutlined,
-  UserSwitchOutlined,
 } from "@ant-design/icons";
-import { Avatar, Button, Col, Menu, Row } from "antd";
+import { Menu } from "antd";
 import { Link } from "react-router-dom";
 import SubMenu from "antd/lib/menu/SubMenu";
 
@@ -18,9 +15,11 @@ const { Item } = Menu;
 
 const HeaderNav = () => {
   const [current, setCurrent] = useState("home");
+
   const handleclick = (e) => {
     setCurrent(e.key);
   };
+
   return (
     <>
       <Menu
@@ -34,12 +33,52 @@ const HeaderNav = () => {
           justifyContent: "center",
         }}
       >
-        <div
+        <Item
+          //   key="home"
           className="logo"
-          style={{ position: "absolute", top: 0, left: 50 }}
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 50,
+          }}
         >
           <Link to="/">Logo</Link>
-        </div>
+        </Item>
+        {/* <>
+          <Button
+            className={styles.menubtn}
+            type="primary"
+            shape="circle"
+            icon={<MenuOutlined />}
+            onClick={showDrawer}
+          ></Button>
+          <Drawer
+            // title={<Image src={logoPic} alt="logo" />}
+            placement="right"
+            onClose={onClose}
+            visible={state.visible}
+          >
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <Button type="text" href="/finances" icon={<EuroOutlined />}>
+                Finances
+              </Button>
+
+              <Button type="text" href="/sante" icon={<HeartOutlined />}>
+                Santé
+              </Button>
+              <Button
+                type="text"
+                href="/mathematiques"
+                icon={<CalculatorOutlined />}
+              >
+                Mathématiques
+              </Button>
+              <Button type="text" href="/autres" icon={<BarsOutlined />}>
+                Autres
+              </Button>
+            </div>
+          </Drawer>
+        </> */}
         <Item
           // className="p-3  ml-5  mr-5 text-black "
           key="home"

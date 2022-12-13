@@ -14,15 +14,16 @@ function App() {
   return (
     <>
       <HeaderNav />
-
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/register" component={Register} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/services" component={ServicesHome} />
-        <Route exact path="/products" component={ProductsHome} />
-        <Route exact path="/blogs" component={BlogsHome} />
-      </Switch>
+      <div className="container">
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/register" component={Register} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/services" component={ServicesHome} />
+          <Route exact path="/products" component={ProductsHome} />
+          <Route exact path="/blogs" component={BlogsHome} />
+        </Switch>
+      </div>
     </>
   );
 }
