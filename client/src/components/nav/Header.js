@@ -31,6 +31,8 @@ const HeaderNav = () => {
           position: "relative",
           display: "flex",
           justifyContent: "center",
+          maxWidth: "100%",
+          borderButtom: "20px solid red",
         }}
       >
         <Item
@@ -44,41 +46,6 @@ const HeaderNav = () => {
         >
           <Link to="/">Logo</Link>
         </Item>
-        {/* <>
-          <Button
-            className={styles.menubtn}
-            type="primary"
-            shape="circle"
-            icon={<MenuOutlined />}
-            onClick={showDrawer}
-          ></Button>
-          <Drawer
-            // title={<Image src={logoPic} alt="logo" />}
-            placement="right"
-            onClose={onClose}
-            visible={state.visible}
-          >
-            <div style={{ display: "flex", flexDirection: "column" }}>
-              <Button type="text" href="/finances" icon={<EuroOutlined />}>
-                Finances
-              </Button>
-
-              <Button type="text" href="/sante" icon={<HeartOutlined />}>
-                Santé
-              </Button>
-              <Button
-                type="text"
-                href="/mathematiques"
-                icon={<CalculatorOutlined />}
-              >
-                Mathématiques
-              </Button>
-              <Button type="text" href="/autres" icon={<BarsOutlined />}>
-                Autres
-              </Button>
-            </div>
-          </Drawer>
-        </> */}
         <Item
           // className="p-3  ml-5  mr-5 text-black "
           key="home"
